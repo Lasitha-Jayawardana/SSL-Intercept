@@ -12,7 +12,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>attrib.h</itemPath>
+      <itemPath>cert.c</itemPath>
+      <itemPath>cert.h</itemPath>
+      <itemPath>defaults.h</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>opts.c</itemPath>
+      <itemPath>opts.h</itemPath>
+      <itemPath>ssl.c</itemPath>
+      <itemPath>ssl.h</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -35,19 +43,43 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incFile>
+            <pElem>attrib.h</pElem>
+            <pElem>cert.h</pElem>
+            <pElem>defaults.h</pElem>
+            <pElem>opts.h</pElem>
+            <pElem>ssl.h</pElem>
+          </incFile>
+        </cTool>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibLibItem>crypto</linkerLibLibItem>
-            <linkerLibLibItem>crypto</linkerLibLibItem>
-            <linkerLibLibItem>event</linkerLibLibItem>
-            <linkerLibLibItem>event</linkerLibLibItem>
-            <linkerLibLibItem>ssl</linkerLibLibItem>
-            <linkerLibLibItem>ssl</linkerLibLibItem>
             <linkerLibLibItem>ssl3</linkerLibLibItem>
+            <linkerLibLibItem>crypto</linkerLibLibItem>
+            <linkerLibLibItem>crypto</linkerLibLibItem>
+            <linkerLibLibItem>ssl</linkerLibLibItem>
+            <linkerLibLibItem>ssl</linkerLibLibItem>
+            <linkerLibLibItem>crypto</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="attrib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cert.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cert.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="defaults.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="opts.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="opts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ssl.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -85,7 +117,23 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="attrib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cert.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cert.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="defaults.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="opts.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="opts.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ssl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ssl.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=1Lasitha_SSLsplit
+PROJECTNAME=2Lasitha_SSLsplit
 
 # Active Configuration
 DEFAULTCONF=Debug

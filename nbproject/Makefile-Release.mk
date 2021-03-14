@@ -35,9 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/5c0/http_parser.o \
 	${OBJECTDIR}/_ext/5c0/main.o \
-	${OBJECTDIR}/_ext/5c0/picohttpparser.o
+	${OBJECTDIR}/cert.o \
+	${OBJECTDIR}/opts.o \
+	${OBJECTDIR}/ssl.o
 
 
 # C Compiler Flags
@@ -64,20 +65,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lasitha_sslsplit: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lasitha_sslsplit ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/5c0/http_parser.o: ../http_parser.c
-	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -include ../http_parser.h -include ../picohttpparser.h -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/http_parser.o ../http_parser.c
-
 ${OBJECTDIR}/_ext/5c0/main.o: ../main.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -include ../http_parser.h -include ../picohttpparser.h -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/main.o ../main.c
 
-${OBJECTDIR}/_ext/5c0/picohttpparser.o: ../picohttpparser.c
-	${MKDIR} -p ${OBJECTDIR}/_ext/5c0
+${OBJECTDIR}/cert.o: cert.c
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -include ../http_parser.h -include ../picohttpparser.h -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/5c0/picohttpparser.o ../picohttpparser.c
+	$(COMPILE.c) -O2 -include ../http_parser.h -include ../picohttpparser.h -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cert.o cert.c
+
+${OBJECTDIR}/opts.o: opts.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -include ../http_parser.h -include ../picohttpparser.h -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/opts.o opts.c
+
+${OBJECTDIR}/ssl.o: ssl.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -include ../http_parser.h -include ../picohttpparser.h -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ssl.o ssl.c
 
 # Subprojects
 .build-subprojects:
